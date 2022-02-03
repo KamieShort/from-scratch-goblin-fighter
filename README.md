@@ -17,10 +17,16 @@ APP.js
 grab dom elements -get element by ID
 
 let state
-set up objects for each dragon
+set up objects for each dragon [{name, hp}]
 
 add event listener for submit
-prevent default
-make new object with goblin name and add math random to create likleness of hit
+include prevent default
+make new object with dragon name and add hp
+push new object
+
+display function
+
+add event listener for click
 
 set up renderDragon function in utils.js
+TDD in example.test.js
