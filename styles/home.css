@@ -1,1 +1,3 @@
-/* add home page styles here */
+.background-img {
+    background-image:('./assets/background.jpg');
+}

@@ -11,23 +11,31 @@
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/style.css" />
         <link rel="stylesheet" href="./styles/home.css" />
-        <title>Document</title>
+        <title>Wizards vs. Dragons</title>
     </head>
 
-    <body>
+    <body class="background-img">
         <header>
-            <div class="gutter-right logo">
-                <img src="./assets/big-logo.png" />
-            </div>
+            <h1>Wizards vs. Dragons</h1>
         </header>
         <main>
-            <section class="main-section">
-                <img class="main-logo" src="./assets/alchemy-logo.png" />
-                <h2>Goblin Fighter</h2>
+            <img src="./assets/background.jpg" />
+            <section class="dragons">
+                <div class="defeated dragons"></div>
+                <p>You have defeated <span id="defeated-number"> 0 </span>dragons</p>
+            </section>
+            <section class="Wizard">
+                <p>Spells Remaining: <span id="wizard-spells"></span>5</p>
+            </section>
+            <section>
+                <form>
+                    <input name="dragon-name" />
+                    <button class="challenge button">Challenge Dragon!</button>
+                </form>
             </section>
         </main>
         <footer>
-            <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+            <div class="copy gutter-right">2022 Alchemy Code <Lab-Kamie></Lab-Kamie></div>
         </footer>
 
         <script type="module" src="./app.js"></script>
