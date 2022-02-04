@@ -1,12 +1,33 @@
-.background-img {
+/* .background-img {
     background-image: ('./assets/background.jpg');
-}
+} */
+/* body {
+    background-image: url('.background-img');'
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+} */
 
 .dragon {
-    border: dotted;
+    font-size: 50px;
+    border: solid coral;
+    image-orientation: from-image;
+    background-color: cornflowerblue;
     flex-direction: row;
 }
 
 h1 {
     display: flex;
+}
+
+.wizard {
+    font-size: 50px;
+}
+
+.challenge-button {
+    font-size: 50px;
+}
+
+input {
+    font-size: 50px;
 }

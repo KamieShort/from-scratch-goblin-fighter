@@ -11,29 +11,35 @@
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/style.css" />
         <link rel="stylesheet" href="./styles/home.css" />
+        <style> 
+            body {
+                background-image: url('background.jpg');
+            }
+            </style> 
+            
+        <!-- <div style="background-image: url('background.jpg');"></div> -->
         <title>Wizards vs. Dragons</title>
     </head>
 
-    <body class="background-img">
+    <body>
+        <!-- <img src="./assets/background.jpg" /> -->
         <header>
             <h1>Wizards vs. Dragons</h1>
         </header>
         <main>
-            <img src="./assets/background.jpg" />
             <!--move to background-->
-
             <section class="dragons">
                 <div class="defeated-dragons"></div>
                 <p>You have defeated <span id="defeated-number"> 0 </span>dragons</p>
                 <div class="defeated-list"></div>
             </section>
-            <section class="Wizard">
+            <section class="wizard">
                 <p>Spells Remaining: <span id="wizard-spells"></span></p>
                 <!--add wizard img here id="wizard-img"-->
             </section>
             <section>
                 <form id="new-form">
-                    <button class="challenge button">Challenge Dragon!</button>
+                    <button class="challenge-button">Challenge Dragon!</button>
                     <input name="dragon-name" />
                 </form>
             </section>
