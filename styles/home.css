@@ -7,6 +7,11 @@
     background-position: right top;
     background-attachment: scroll;
 } */
+header {
+    font-family: Syne Tactile, cursive;
+    text-align: center;
+    font-size: 50px;
+}
 
 .dragon {
     font-size: 50px;
@@ -14,10 +19,6 @@
     image-orientation: from-image;
     background-color: cornflowerblue;
     flex-direction: row;
-}
-
-h1 {
-    display: flex;
 }
 
 .wizard {
