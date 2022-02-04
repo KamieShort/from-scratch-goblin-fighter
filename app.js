@@ -4,6 +4,7 @@ const defeatedNumberEl = document.getElementById('defeated-number');
 const spellsRemainingEl = document.getElementById('wizard-spells');
 const form = document.getElementById('new-form');
 const dragonListEl = document.querySelector('.dragons');
+const wizardImgEl = document.querySelector('#wizard-img');
 
 // let state
 let spells = 5;
@@ -24,19 +25,21 @@ form.addEventListener('submit', (e) => {
     const dragonName = data.get('dragon-name');
 
     const newDragon = {
+        id: currentId++,
         name: dragonName,
         hp: 5,
     };
-    newDragon.push(newDragon);
+    dragons.push(newDragon);
 
     displayDragons();
+    console.log(dragon);
 });
 
 function displayDragons() {
     dragonListEl.textContent = '';
 
     for (let dragon of dragons) {
-        const dragonListEl = renderDragon(dragon);
+        const dragonEl = renderDragon(dragon);
 
         dragonEl.addEventListener('click', () => {
             dragonClickHandler(dragon);
@@ -45,3 +48,37 @@ function displayDragons() {
     }
 }
 displayDragons();
+
+function dragonClickHandler(dragonData) {
+    if (dragonData.hp <= 0) return;
+    if (Math.random() < 0.5) {
+        alert(`You hit ${dragonData.name}!`);
+        dragonData.hp--;
+    } else {
+        alert('You missed!');
+    }
+    if (Math.random() < 0.5) {
+        spells--;
+        alert('You got hit');
+    } else {
+        alert(`${dragonData.name} missed!`);
+    }
+    spellsRemainingEl.textContent = spells;
+    const dragonHPEl = document.getElementById(`dragon-hp-${dragonData.id}`);
+    dragonHPEl.textContent = dragonData.hp;
+
+    const faceEl = document.getElementById(`dragon-face-${dragonData.id}`);
+    faceEl.textContent = dragonData.hp > 0 ? '👹' : '🔥';
+
+    if (dragonData.hp === 0) {
+        defeatedDragons++;
+        defeatedNumberEl.textContent = defeatedDragons;
+    }
+
+    if (spells === 0) {
+        wizardImgEl.classList.add('game-over');
+        alert('Game Over!');
+    }
+    const allDefeated = dragons.every((dragon) => dragon.hp === 0);
+    if (allDefeated) alert('You win!!!');
+}

@@ -1,4 +1,4 @@
-## Wizards vs. Dragons Plan
+# Wizards vs. Dragons Plan
 
 Styles: Harry Potter themed.
 get Hogwarts background.
@@ -9,10 +9,10 @@ instead of HP use spells?
 ## Order of Operations
 
 HTML
-add HMTL labels, span -Wizard HP, form with buttons,
--set up div class for dragons (will apend later)
+add HTML labels, span -Wizard HP, form with buttons,
+-set up div class for dragons (will append later)
 set up ID's for all
---CSS base structure as we go.
+
 APP.js
 grab dom elements -get element by ID
 
@@ -30,3 +30,8 @@ add event listener for click
 
 set up renderDragon function in utils.js
 TDD in example.test.js
+
+clickerHandler
+create math random to generate likeliness of hit.
+
+CSS-add dragon img to background
