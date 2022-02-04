@@ -15,6 +15,13 @@ header {
     margin-top: 2px;
 }
 
+.defeated-dragons {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Syne Tactile, cursive;
+}
+
 .dragon {
     font-size: 50px;
     text-align: center;

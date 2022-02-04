@@ -7,8 +7,8 @@ const dragonListEl = document.querySelector('.dragons');
 const wizardImgEl = document.querySelector('#wizard-img');
 
 // let state
-let spells = 5;
 let defeatedDragons = 0;
+let spells = 5;
 let dragons = [
     { name: 'Fireball', hp: 5 },
     { name: 'Scales', hp: 5 },
@@ -18,6 +18,7 @@ let currentId = 3;
 // set event listeners
 //new dragon form
 spellsRemainingEl.textContent = spells;
+defeatedNumberEl.textContent = defeatedDragons;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -52,7 +53,7 @@ displayDragons();
 
 function dragonClickHandler(dragonData) {
     if (dragonData.hp <= 0) return;
-    if (Math.random() < 0.5) {
+    if (Math.random() < 1) {
         alert(`You hit ${dragonData.name}!`);
         dragonData.hp--;
     } else {
@@ -67,7 +68,6 @@ function dragonClickHandler(dragonData) {
     }
     spellsRemainingEl.textContent = spells;
     const dragonHPEl = document.getElementById(`dragon-hp-${dragonData.id}`);
-
     dragonHPEl.textContent = dragonData.hp;
 
     const faceEl = document.getElementById(`dragon-face-${dragonData.id}`);
