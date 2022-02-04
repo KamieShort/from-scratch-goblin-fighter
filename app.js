@@ -58,6 +58,7 @@ function dragonClickHandler(dragonData) {
     } else {
         alert('You missed!');
     }
+    displayDragons();
     if (Math.random() < 0.5) {
         spells--;
         alert('You got hit');

@@ -30,11 +30,10 @@
             <p>Wizards vs. Dragons<p>
         </header>
         <main>
-            <!--move to background-->
+            <div class="defeated-dragons">
+                <p>You have defeated <span id="defeated-number"> 0 </span>dragons</p></div>
+            <div class="defeated-list"></div>
             <section class="dragons">
-                <div class="defeated-dragons"></div>
-                <p>You have defeated <span id="defeated-number"> 0 </span>dragons</p>
-                <div class="defeated-list"></div>
             </section>
             <section class="wizard">
                 <p>Spells Remaining: <span id="wizard-spells"></span></p>
@@ -43,7 +42,8 @@
             <section>
                 <form id="new-form">
                     <button class="challenge-button">Challenge Dragon!</button>
-                    <input name="dragon-name" />
+                    <input name="dragon-name"/>
+        
                 </form>
             </section>
         </main>
