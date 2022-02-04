@@ -14,7 +14,7 @@ let dragons = [
     { name: 'Scales', hp: 5 },
     { name: 'Patty', hp: 5 },
 ];
-
+let currentId = 3;
 // set event listeners
 //new dragon form
 form.addEventListener('submit', (e) => {
@@ -32,7 +32,6 @@ form.addEventListener('submit', (e) => {
     dragons.push(newDragon);
 
     displayDragons();
-    console.log(dragon);
 });
 
 function displayDragons() {
