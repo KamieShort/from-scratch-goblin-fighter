@@ -25,7 +25,8 @@ header {
 .dragon {
     font-size: 50px;
     text-align: center;
-    border: solid coral;
+    border:solid coral;
+    border-radius: 8px,
     image-orientation: from-image;
     background-color: cornflowerblue;
     flex-direction: row;
@@ -36,6 +37,10 @@ header {
     font-size: 50px;
     color: tomato;
     font-weight: 200px;
+}
+#wizard-img {
+    width: 300px;
+    height: 300px;
 }
 
 .challenge-button {

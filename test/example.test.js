@@ -8,11 +8,12 @@ const test = QUnit.test;
 test('renderDragons should return an object (newDragon) with name and hp.', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="dragon"><p>Fireball</p><p>👹</p><p>5</p></div>`;
+    const expected = `<div class="dragon"><p>Fireball</p><p id="dragon-face-1">👹</p><p id="dragon-hp-1">5</p></div>`;
 
     //Act
     // Call the function you're testing and set the result to a const
     const actual = renderDragon({
+        id: 1,
         name: 'Fireball',
         hp: 5,
     });

@@ -10,9 +10,9 @@ const wizardImgEl = document.querySelector('#wizard-img');
 let defeatedDragons = 0;
 let spells = 5;
 let dragons = [
-    { name: 'Fireball', hp: 5 },
-    { name: 'Scales', hp: 5 },
-    { name: 'Patty', hp: 5 },
+    { id: 1, name: 'Fireball', hp: 5 },
+    { id: 2, name: 'Scales', hp: 5 },
+    { id: 3, name: 'Patty', hp: 5 },
 ];
 let currentId = 3;
 // set event listeners
@@ -53,7 +53,7 @@ displayDragons();
 
 function dragonClickHandler(dragonData) {
     if (dragonData.hp <= 0) return;
-    if (Math.random() < 1) {
+    if (Math.random() < 0.5) {
         alert(`You hit ${dragonData.name}!`);
         dragonData.hp--;
     } else {
