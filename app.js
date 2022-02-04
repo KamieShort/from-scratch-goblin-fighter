@@ -17,6 +17,8 @@ let dragons = [
 let currentId = 3;
 // set event listeners
 //new dragon form
+spellsRemainingEl.textContent = spells;
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -64,6 +66,7 @@ function dragonClickHandler(dragonData) {
     }
     spellsRemainingEl.textContent = spells;
     const dragonHPEl = document.getElementById(`dragon-hp-${dragonData.id}`);
+
     dragonHPEl.textContent = dragonData.hp;
 
     const faceEl = document.getElementById(`dragon-face-${dragonData.id}`);
