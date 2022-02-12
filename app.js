@@ -22,7 +22,7 @@ defeatedNumberEl.textContent = defeatedDragons;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    if (spells <= 0) return;
     const data = new FormData(form);
 
     const dragonName = data.get('dragon-name');
@@ -52,6 +52,7 @@ function displayDragons() {
 displayDragons();
 
 function dragonClickHandler(dragonData) {
+    if (spells <= 0) return;
     if (dragonData.hp <= 0) return;
     if (Math.random() < 0.5) {
         alert(`You hit ${dragonData.name}!`);
