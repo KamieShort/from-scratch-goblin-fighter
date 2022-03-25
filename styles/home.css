@@ -1,1 +1,68 @@
-/* add home page styles here */
+/* .background-img {
+    background-image: ('./assets/background.jpg');
+} */
+/* body {
+    background-image: url('.background-img');'
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+} */
+header {
+    font-family: Syne Tactile, cursive;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.defeated-dragons {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Syne Tactile, cursive;
+}
+
+.dragon {
+    font-size: 50px;
+    text-align: center;
+    border:solid coral;
+    border-radius: 8px,
+    image-orientation: from-image;
+    background-color: cornflowerblue;
+    flex-direction: row;
+    margin-top: 600px;
+}
+
+.wizard {
+    font-size: 50px;
+    color: tomato;
+    font-weight: 200px;
+}
+#wizard-img {
+    width: 300px;
+    height: 300px;
+}
+
+.challenge-button {
+    font-size: 50px;
+}
+
+input {
+    font-size: 50px;
+}
+
+main {
+    display: flex;
+    background-image: url('../assets/background.jpg');
+    background-size: 150%;
+    /* min-height: 500px; */
+    background-position: center;
+    min-height: 2000px;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
